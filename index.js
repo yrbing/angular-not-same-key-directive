@@ -11,9 +11,9 @@ angular.module('notSameKeyModule',[])
     link: function(scope, el, attrs, ctrl) {
       ctrl.$validators.notsamekey = function(modelValue, viewValue){
 
-        var thisValue = el.attr('not-same-key-value');
+        var thisValue = el.attr('not-same-key');
         var attrNames = [];
-        var elList = document.querySelectorAll('[not-same-key-value="'+thisValue+'"]');
+        var elList = document.querySelectorAll('[not-same-key="'+thisValue+'"]');
 
         for(var i = 0; i < elList.length; i++) {
           var thisEl = angular.element(elList[i]);
@@ -28,23 +28,6 @@ angular.module('notSameKeyModule',[])
           return viewValue == name;
         })
       }
-    }
-  }
-}])
-
-// 得到notSameKey编译后的值，新增属性not-same-key-value存之
-.directive('notSameKey', [function(){
-  return {
-    priority: 10,
-    scope: {
-      notSameKey: '='
-    },
-    link: function(scope, el, attrs, ctrl) {
-      // attrs.$set('not-same-key-value', scope.notSameKey);
-      scope.$watch('notSameKey',function(newVal, oldVal){
-        // console.log('digesting...',newVal,oldVal)
-        attrs.$set('not-same-key-value', newVal);
-      })
     }
   }
 }])
