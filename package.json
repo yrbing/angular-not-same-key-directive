@@ -1,6 +1,6 @@
 {
-  "name": "ng-model-no-equal",
-  "version": "0.0.1",
+  "name": "ng-model-not-equal",
+  "version": "0.0.2",
   "description": "force ng-model to not equal to each other",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,8 @@
     "ng-model"
   ],
   "author": "yrbing@github",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "angular": "^1.4.7"
+  }
 }

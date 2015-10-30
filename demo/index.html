@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="Test">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<style>
+		input.ng-invalid{
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="DemoCtrl">
+		<form>
+			<input type="text" ng-model="person1name" not-same-key="everyoneNames">
+			<input type="text" ng-model="person2name" not-same-key="everyoneNames">
+			<input type="text" ng-model="person3name" not-same-key="{{dynamicKey}}">
+			<input type="text" ng-model="person4name" not-same-key="{{dynamicKey}}">
+		</form>
+	</div>
+<script src="../node_modules/angular/angular.js"></script>
+<script src="../index.js"></script>
+<script>
+angular.module('Test',['notSameKeyModule'])
+.controller('DemoCtrl', function($scope) {
+	$scope.dynamicKey = 'some-key'
+})
+</script>
+</body>
+</html>
