@@ -1,0 +1,17 @@
+{
+  "name": "ng-model-no-equal",
+  "version": "0.0.1",
+  "description": "force ng-model to not equal to each other",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "form",
+    "validate",
+    "angular",
+    "ng-model"
+  ],
+  "author": "yrbing@github",
+  "license": "MIT"
+}
